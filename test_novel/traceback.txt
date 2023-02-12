@@ -1,22 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 281, in script
-    lisa {i} "Делает затяжку и протягивает вам чуйку.{/i}"
-Exception: Sayer 'lisa {i}' is not defined.
+  File "game/script.rpy", line 799, in script
+    $ quit()
+  File "game/script.rpy", line 799, in <module>
+    $ quit()
+NameError: name 'quit' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 281, in script
-    lisa {i} "Делает затяжку и протягивает вам чуйку.{/i}"
-  File "/home/miksolo/renpy/engine/renpy-8.0.3-sdk/renpy/ast.py", line 881, in execute
-    who = eval_who(self.who, self.who_fast)
-  File "/home/miksolo/renpy/engine/renpy-8.0.3-sdk/renpy/ast.py", line 774, in eval_who
-    raise Exception("Sayer '%s' is not defined." % who)
-Exception: Sayer 'lisa {i}' is not defined.
+  File "game/script.rpy", line 799, in script
+    $ quit()
+  File "/home/miksolo/renpy/engine/renpy-8.0.3-sdk/renpy/ast.py", line 1131, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/home/miksolo/renpy/engine/renpy-8.0.3-sdk/renpy/python.py", line 1061, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 799, in <module>
+    $ quit()
+NameError: name 'quit' is not defined
 
 Linux-5.15.0-60-generic-x86_64-with-glibc2.35 x86_64
 Ren'Py 8.0.3.22090809
 Что то на русском 1.0
-Sun Feb 12 14:25:05 2023
+Sun Feb 12 21:43:01 2023
