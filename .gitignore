@@ -1,1 +1,4 @@
 *.zip
+test_novel/game/saves
+test_novel/game/cache
+saves

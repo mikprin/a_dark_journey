@@ -10,6 +10,10 @@
 #     import 
 
 
+# This story follows the journey of an emotionally lost young adult who struggles with depression.
+# Through the exploration of their inner emotions, they will discover the ability to cope with their feelings of despair.
+# Set in a modern day city, the story is set to the backdrop of a mix of rap and indie songs, giving a unique and personal soundtrack to the protagonist's journey. With the help of their friends, they will learn how to accept themselves and find hope and happiness in the midst of their darkness. The game is a visual novel with choices that will shape the eventual outcome of the story and provide insight into the character's inner workings. Through their journey, the player will be able to experience a powerful and emotionally resonating story of self-discovery and acceptance.
+
 define vp = Character("Василий Петрович" , who_color="#EAE0DA")
 define vitek = Character("Витек", who_color="#F7F5EB")
 define lisa = Character("Стрелка", who_color= "#EAC7C7")
@@ -415,8 +419,27 @@ label start:
                 pass
 
 
+        show tony default with moveinleft
+        tony """Как и в жизни я появлюсь уже после принятого вами решения.
+        
+        И скажу что то, что выдал мне промпт GPT3:
+
+        Суицид является крайним и неправильным решением для решения проблем.
+        Это может привести к необратимым и непреодолимым последствиям для вас и ваших близких.
+        
+        Вместо суицида рекомендуется обратиться за помощью к профессионалам,
+        таким как психолог, врач или пастор, которые могут предоставить вам поддержку и ресурсы,
+        необходимые для выхода из трудной ситуации.
+        """
+        
+
+        hide tony with moveoutright
+        "О, кажется корабль подьехал!"
+
 
         scene bg cool_str with fade
+
+        
 
         jump quick_end_scene
 
@@ -447,6 +470,52 @@ label start:
             yar "Движение..."
             "?"
             scene bg city with fade
+
+
+
+        show lisa default with fade
+
+        yar "Что для тебя есть влюбленность?"
+        lisa "Нуу.. это когда вдохновение и ты паришь, ты мотивируешься делать больше и лучше."
+        yar "Когда ты последний раз влюблялась?"
+        lisa "Нуу.."
+        lisa """
+        Две недели назад. Ко мне приехала девушка. Мы гуляли и танцевали с ней. Она была прекрасна.
+        Вот что я записала в своем дневнике:
+
+        Как классно смотреть в ее хитрые глаза. Это спокойствие, это принятие. Это умиротворение.
+        Может и хорошо что она не может быть рядом, иначе бы кажется я ничего нельзя было бы бы делать больше.
+        
+        Мурррррр. Этот прищур. Этот кайф. Эта улыбка. Этот бриз нежности. Эти нежные и дикие танцы.
+        Знешь, этот поток. Воспоминание как я бегу после. Я снова различаю цвета любви в мире.
+        
+        Снова свобода, но ненадолго.
+        Прохладное солнце через окно. Не хочу забывать дорогу туда. Необычно нежный воздух.
+        
+        Мы идем, она видит что я смотрю на нее с Любовью улыбается. Нежно держимся за руки.
+        Забуду ли я этот вечер? Хочу танцевать с ней на полу. Валяться, беситься.
+        Мы достойны так весилиться.
+        
+        Она такая дикая внутри, может гулять десятки километров и потом быть нежной. Горячая внутри. Опять вспоминаю как она морщиться. 
+
+        но для тебя это все просто слова. Ты не можешь же этого ощутить.
+        Наверное как то так оно ощущается...
+        """
+
+        yar "Мда. Ты почти как Онегин ебать. Или кто там был?  И это без травы тебя так вштырило? Вы точно там просто гуляли?"
+
+        lisa "Да точно точно. Ну может пол коктейля опрокинули. Ничего серьезного."
+
+        yar "И что сейчас с ней?"
+
+        lisa "Уехала."
+
+        yar "Ну значит такое себе. Было и было. Нужно идти вперед."
+
+        lisa "А что для тебя влюбленность?"
+
+        menu what_is_love:
+            
 
         jump end_scene
 
