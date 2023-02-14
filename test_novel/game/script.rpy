@@ -752,7 +752,7 @@ label start:
                 yar "Пойду покурю. Подумать надо..."
                 hide vitek with dissolve
 
-                jump mistery_scene_1
+                jump walking_in_town
 
 
 
